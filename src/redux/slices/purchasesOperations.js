@@ -27,7 +27,6 @@ export const addPurchases = createAsyncThunk(
     try {
       // const token = thunkAPI.getState().auhtSate.token;
       // tokenService.set(token);
-      console.log(data);
       const response = await cyplyatnic.post('/purchases', data);
 
       return response.data;

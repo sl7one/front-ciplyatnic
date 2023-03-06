@@ -43,7 +43,6 @@ export const updateOrder = createAsyncThunk(
     try {
       // const token = thunkAPI.getState().auhtSate.token;
       // tokenService.set(token);
-      // console.log(data);
       const { _id, ...payload } = data;
       const response = await cyplyatnic.post(`/orders/${_id}`, payload);
       return response.data;
