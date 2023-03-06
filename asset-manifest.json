@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/front-ciplyatnic/static/css/main.0e8012fe.css",
+    "main.js": "/front-ciplyatnic/static/js/main.20d1fc29.js",
+    "static/media/logo.png": "/front-ciplyatnic/static/media/logo.b9d76f3d6c56090d5732.png",
+    "static/media/icons-sprite.svg": "/front-ciplyatnic/static/media/icons-sprite.87922f5926f719de5f3f11cfc18ace51.svg",
+    "index.html": "/front-ciplyatnic/index.html",
+    "main.0e8012fe.css.map": "/front-ciplyatnic/static/css/main.0e8012fe.css.map",
+    "main.20d1fc29.js.map": "/front-ciplyatnic/static/js/main.20d1fc29.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0e8012fe.css",
+    "static/js/main.20d1fc29.js"
+  ]
+}
