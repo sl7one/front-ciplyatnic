@@ -12,7 +12,9 @@ import { updateSalledOrder } from '../../redux/slices/sallesOperations';
 export const OrderList = ({ id, items }) => {
   const dispatch = useDispatch();
 
-  const [flags, setFlags] = useState({ button: { sale: true, remove: true, edit: true } });
+  const [flags, setFlags] = useState({
+    button: { sale: true, remove: true, edit: true },
+  });
 
   const [editModal, setEditModal] = useState(false);
 
@@ -76,7 +78,13 @@ export const OrderList = ({ id, items }) => {
     return (
       <li className="orders__item" key={_id}>
         <details open={true} className="poultry">
-          <ListSummary id={id} name={name} date={date} phone={phone} location={location} />
+          <ListSummary
+            id={id}
+            name={name}
+            date={date}
+            phone={phone}
+            location={location}
+          />
           <ProductsList list={data} />
           {!!food.length && <ProductsList list={food} />}
           {!!options.length && <ProductsList list={options} />}
@@ -99,7 +107,7 @@ export const OrderList = ({ id, items }) => {
 
   return (
     <>
-      <ul className="orders__list"> {orders} </ul>
+      <ul className="orders__list">{orders}</ul>
       {editModal &&
         createPortal(
           <ModalEditOrder setEditModal={setEditModal} id={orderId} />,

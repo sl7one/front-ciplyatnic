@@ -4,13 +4,15 @@ import { Header } from '../components/Header/Header';
 import { OrderList } from '../components/Order/OrderList';
 import { fetchPurchases } from '../redux/slices/purchasesOperations';
 import { Footer } from '../components/Footer/Footer';
+import Loader from 'react-loaders';
 
 export const Purchases = () => {
   const dispatch = useDispatch();
 
-  const purchasesList = useSelector(state => state.purchases.orders);
+  const purchasesList = useSelector(state => state.purchases);
 
-  const { items } = purchasesList;
+  const { orders, isLoading } = purchasesList;
+  const { items } = orders;
 
   useEffect(() => {
     dispatch(fetchPurchases());
@@ -22,6 +24,9 @@ export const Purchases = () => {
       <main>
         <div className="container">
           <OrderList id="purchases" items={items} />
+          {isLoading && (
+            <Loader type="ball-scale-multiple" active={isLoading} />
+          )}
         </div>
       </main>
       <Footer id="purchases" items={items} />
