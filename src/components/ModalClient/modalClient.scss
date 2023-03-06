@@ -9,7 +9,7 @@
   flex-direction: column;
   gap: 15px;
   pointer-events: all;
-  overflow: auto;
+  overflow: scroll;
 
   &__title {
     // padding: 10px 0;
